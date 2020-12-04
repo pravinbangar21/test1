@@ -1,6 +1,8 @@
 - name: update web servers
   hosts: all
   remote_user: ansible
+  become: yes
+  gather_facts: no
 
   tasks:
   - name: ensure apache is at the latest version
